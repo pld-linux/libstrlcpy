@@ -33,9 +33,9 @@ cp %{SOURCE0} .
 cp %{SOURCE1} .
 
 %build
-gcc %{rpmcflags} -c strlcpy.c
-gcc %{rpmcflags} -c strlcat.c
-gcc %{rpmldflags} -Wl,-soname,%{soname} -shared strlcpy.o strlcat.o -o %{soname}
+%{__cc} %{rpmcflags} -c strlcpy.c
+%{__cc} %{rpmcflags} -c strlcat.c
+%{__cc} %{rpmldflags} -Wl,-soname,%{soname} -shared strlcpy.o strlcat.o -o %{soname}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -56,5 +56,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/%{soname}
 
 %files devel
+%defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/%{name}.so
 %{_mandir}/man3/*
