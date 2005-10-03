@@ -19,6 +19,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 strlcpy and strlcat - consistent, safe, string copy and concatenation.
 
+%package devel
+Summary:	Development libraries for libstrlcpy
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+
+%description devel
+This is the package containing the development library for libstrlcpy.
+
 %prep
 %setup -q -c -T
 cp %{SOURCE0} .
@@ -44,6 +52,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/*.so
 %attr(755,root,root) %{_libdir}/%{soname}
+
+%files devel
+%attr(755,root,root) %{_libdir}/%{name}.so
 %{_mandir}/man3/*
