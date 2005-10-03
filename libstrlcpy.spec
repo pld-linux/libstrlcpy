@@ -25,7 +25,8 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
-This is the package containing the development library for libstrlcpy.
+This is the package containing the development library and manual
+pages for libstrlcpy.
 
 %prep
 %setup -q -c -T
