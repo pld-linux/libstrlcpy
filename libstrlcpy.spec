@@ -2,7 +2,7 @@ Summary:	A library implementing OpenBSD strlcpy/strlcat functions.
 Name:		libstrlcpy
 %define		_snap 20050808
 Version:	0.%{_snap}
-Release:	0.2
+Release:	0.5
 License:	BSD
 Group:		Libraries
 Source0:	ftp://ftp.openbsd.org/pub/OpenBSD/src/lib/libc/string/strlcpy.c
@@ -43,6 +43,7 @@ install -d $RPM_BUILD_ROOT{%{_libdir},%{_mandir}/man3}
 ln -s %{soname} $RPM_BUILD_ROOT%{_libdir}/%{name}.so
 install %{soname} $RPM_BUILD_ROOT%{_libdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_mandir}/man3
+echo '.so strlcpy.3'> $RPM_BUILD_ROOT%{_mandir}/man3/strlcat.3
 
 %clean
 rm -rf $RPM_BUILD_ROOT
