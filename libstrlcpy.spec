@@ -3,7 +3,7 @@ Summary(pl):	Biblioteka implementuj±ca funkcje strlcpy/strlcat z OpenBSD
 Name:		libstrlcpy
 %define		_snap 20050808
 Version:	0.%{_snap}
-Release:	0.5
+Release:	1
 License:	BSD
 Group:		Libraries
 Source0:	ftp://ftp.openbsd.org/pub/OpenBSD/src/lib/libc/string/strlcpy.c
