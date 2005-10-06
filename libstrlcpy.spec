@@ -44,9 +44,9 @@ cp %{SOURCE0} .
 cp %{SOURCE1} .
 
 %build
-%{__cc} %{rpmcflags} -c strlcpy.c
-%{__cc} %{rpmcflags} -c strlcat.c
-%{__cc} %{rpmldflags} -Wl,-soname,%{soname} -fPIC -shared strlcpy.o strlcat.o -o %{soname}
+%{__cc} %{rpmcflags} -c strlcpy.c -fPIC
+%{__cc} %{rpmcflags} -c strlcat.c -fPIC
+%{__cc} %{rpmldflags} -Wl,-soname,%{soname} -shared strlcpy.o strlcat.o -o %{soname}
 
 %install
 rm -rf $RPM_BUILD_ROOT
