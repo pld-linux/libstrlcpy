@@ -1,5 +1,5 @@
 Summary:	A library implementing OpenBSD strlcpy/strlcat functions
-Summary(pl):	Biblioteka implementuj±ca funkcje strlcpy/strlcat z OpenBSD
+Summary(pl.UTF-8):   Biblioteka implementujÄ…ca funkcje strlcpy/strlcat z OpenBSD
 Name:		libstrlcpy
 %define		_snap 20050808
 Version:	0.%{_snap}
@@ -20,13 +20,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 strlcpy and strlcat - consistent, safe, string copy and concatenation.
 
-%description -l pl
-strlcpy i strlcat - spójne i bezpieczne kopiowanie i ³±czenie
-³añcuchów znaków.
+%description -l pl.UTF-8
+strlcpy i strlcat - spÃ³jne i bezpieczne kopiowanie i Å‚Ä…czenie
+Å‚aÅ„cuchÃ³w znakÃ³w.
 
 %package devel
 Summary:	Development files for libstrlcpy
-Summary(pl):	Pliki programistyczne libstrlcpy
+Summary(pl.UTF-8):   Pliki programistyczne libstrlcpy
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -34,7 +34,7 @@ Requires:	%{name} = %{version}-%{release}
 This is the package containing the development files and manual
 pages for libstrlcpy.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Ten pakiet zawiera pliki programistyczne i strony manuala dla
 libstrlcpy.
 
