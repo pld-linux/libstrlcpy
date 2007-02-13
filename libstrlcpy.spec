@@ -1,5 +1,5 @@
 Summary:	A library implementing OpenBSD strlcpy/strlcat functions
-Summary(pl.UTF-8):   Biblioteka implementująca funkcje strlcpy/strlcat z OpenBSD
+Summary(pl.UTF-8):	Biblioteka implementująca funkcje strlcpy/strlcat z OpenBSD
 Name:		libstrlcpy
 %define		_snap 20050808
 Version:	0.%{_snap}
@@ -26,7 +26,7 @@ strlcpy i strlcat - spójne i bezpieczne kopiowanie i łączenie
 
 %package devel
 Summary:	Development files for libstrlcpy
-Summary(pl.UTF-8):   Pliki programistyczne libstrlcpy
+Summary(pl.UTF-8):	Pliki programistyczne libstrlcpy
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
